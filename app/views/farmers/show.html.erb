@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @farmer %>
+<% @farmer.animals.each do |a| %>
+<p><%= a.name %></p>
+<% end %>
+
+<div>
+  <%= link_to "Edit this farmer", edit_farmer_path(@farmer) %> |
+  <%= link_to "Back to farmers", farmers_path %>
+
+  <%= button_to "Destroy this farmer", @farmer, method: :delete %>
+</div>
