@@ -18,10 +18,12 @@
 
   <div>
     <%= form.label :farmer_id, style: "display: block" %>
-    <%= form.text_field :farmer_id %>
+    <%# <%= form.text_field :farmer_id %>
+    <%= form.collection_radio_buttons :farmer_id, @farmers, :id, :name %>
+    <%= form.collection_select :farmer_id, @farmers, :id, :name %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit %>    
   </div>
 <% end %>
