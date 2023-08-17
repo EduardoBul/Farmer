@@ -22,10 +22,10 @@ class AnimalsController < ApplicationController
   # POST /animals or /animals.json
   def create
     @animal = Animal.new(animal_params)
-   
+    # @animal.farmer = Farmer.last SACAMOS. PARA PODER TENER ELECCIONES DE GRANGEROS
     respond_to do |format|
       if @animal.save
-        format.html { redirect_to animal_url(@animal), notice: "Animal was successfully created." }
+        format.html { redirect_to animal_url(@animal), notice: "El animal fue creado exitosamente!!!" }
         format.json { render :show, status: :created, location: @animal }
       else
         format.html { render :new, status: :unprocessable_entity }
