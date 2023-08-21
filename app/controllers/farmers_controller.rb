@@ -67,4 +67,5 @@ class FarmersController < ApplicationController
     def farmer_params
       params.require(:farmer).permit(:name, :age)
     end
+    
 end

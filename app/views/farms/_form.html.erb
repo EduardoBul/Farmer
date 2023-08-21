@@ -16,6 +16,19 @@
     <%= form.text_field :name %>
   </div>
 
+  <h3>Granjeros</h3>
+  <div>
+    <%= form.fields_for :farmers do |farmer| %>
+      <%= farmer.label :name, style: "display: block" %>
+      <%= farmer.text_field :name %>
+      <%= farmer.label :age, style: "display: block" %>
+      <%= farmer.text_field :age %>
+      <br>
+      <%= farmer.check_box :_destroy %>
+      <%= farmer.label :_destroy, "Borrar" %>
+    <% end %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

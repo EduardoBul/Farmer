@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_033754) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "farmer_id"
+    t.bigint "farmer_id", null: false
     t.index ["farmer_id"], name: "index_animals_on_farmer_id"
   end
 
@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_033754) do
     t.string "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "farm_id"
+    t.bigint "farm_id", null: false
     t.index ["farm_id"], name: "index_farmers_on_farm_id"
   end
 
